@@ -248,7 +248,7 @@ def git_check():
 
 
 if __name__ == "__main__":
-    # additional option to start file
+    # additional options to start file
     parser = OptionParser()
 
     parser.add_option('-c', '--createcsv', dest='create',

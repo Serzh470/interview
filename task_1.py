@@ -52,7 +52,7 @@ def update_file():
     update initial.csv file with new values from TestData.csv
     """
     print("Updating csv file")
-    data_to_add = []
+    data_to_add = list()
 
     with open("TestData.csv", "r") as f:
         reader = csv.DictReader(f, delimiter=";", fieldnames=FIELDNAMES)
@@ -60,7 +60,7 @@ def update_file():
         for row in reader:
             data_to_add.append(row)
 
-    initial_data = []
+    initial_data = list()
     with open("initial.csv", "r") as f:
         reader = csv.DictReader(f, delimiter=";", fieldnames=FIELDNAMES)
         next(reader, None)  # skip the headers
@@ -93,7 +93,7 @@ def compare_files():  # method 1
     Method 1
     Compare 2 file versions: before and after updating
     """
-    new_data = []
+    new_data = list()
 
     with open("initial_old.csv", "r") as f_old:
         with open("initial.csv", "r") as f_new:
